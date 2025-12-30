@@ -7,7 +7,7 @@ const client = createClient({
   projectId: 'j9snegjr', // Replace with your project ID
   dataset: 'production', // or your dataset name
   useCdn: false,
-  token: "skx3dzgm8hW7F0OizwXZXk6qFq82nF3zYYw9ka8q0jGe1eyFR2PLw1CGBLpitVfDr6y9cyx7aZPRGv0ewIsKILrk4tuT4RF4c8AVcI16hUE50jZ34vWsz8nBJOC1Qy6w9XHOgHRnHVMiKGQ8n44rqQ6wOp6MthMDrCllsJCpDFy1T4dkopGP", // Get this from sanity.io/manage
+  token: process.env.NEXT_PUBLIC_SANITY_TOKEN, // Get this from sanity.io/manage
   apiVersion: '2024-01-01',
 });
 
