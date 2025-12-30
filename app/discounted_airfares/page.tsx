@@ -116,6 +116,7 @@ interface CurrentAffairsPost {
     alt?: string;
   };
   excerpt?: string;
+  content?: any[];  // Change from string to any[]
 }
 
 async function getCurrentAffairsPosts(): Promise<CurrentAffairsPost[]> {

@@ -1,15 +1,13 @@
 // sanity/lib/image.ts
 import imageUrlBuilder from '@sanity/image-url';
-import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import { client } from './client';
 
 const builder = imageUrlBuilder(client);
 
-export function urlFor(source: SanityImageSource) {
-  return builder.image(source); 
+export function urlFor(source: any) {
+  return builder.image(source);
 }
 
-// Helper function to get direct URL
-export function getImageUrl(source: SanityImageSource): string {
+export function getImageUrl(source: any) {
   return builder.image(source).url();
 }
