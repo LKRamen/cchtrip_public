@@ -68,7 +68,7 @@ export default function Home() {
               style={{ height: '600px' }}
             >
               <video
-                src="/cruise_search_demo.mp4"
+                src="https://soan2cgpndnh7ojv.public.blob.vercel-storage.com/cruise_search_demo.mp4"
                 className="w-full h-full object-cover"
                 autoPlay
                 loop
@@ -77,6 +77,7 @@ export default function Home() {
                 controls={false}
                 preload="metadata"
               />
+
             </div>
 
             {/* Primary CTA Button */}

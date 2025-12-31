@@ -13,6 +13,7 @@
     "@sanity/image-url": "^2.0.2",
     "@sanity/vision": "^5.1.0",
     "@tailwindcss/vite": "^4.1.18",
+    "@vercel/blob": "^2.0.0",
     "dotenv": "^17.2.3",
     "lucide-react": "^0.562.0",
     "next": "^16.1.1",
