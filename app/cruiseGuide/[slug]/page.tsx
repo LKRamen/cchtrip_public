@@ -5,6 +5,8 @@ import { PortableText } from "@portabletext/react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { urlFor } from '@/sanity/lib/image'
+import { getImageUrl } from "@/sanity/lib/image";
+import globe_image from "../../assets/globe_image.jpg"
 
 interface CruiseGuidePost {
   _id: string;
@@ -155,6 +157,7 @@ const components = {
   },
 };
 
+
 export default async function CruiseGuidePostPage({
   params,
 }: {
@@ -172,22 +175,15 @@ export default async function CruiseGuidePostPage({
 
   return (
     <div className="p-4 sm:p-8 md:p-10">
+
       {/* Header with Background */}
       <div className="relative rounded-3xl overflow-hidden mb-8">   
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-purple-600/90 dark:from-purple-700/90 dark:to-blue-700/90" />
-        
-        {post.mainImage?.asset?.url && (
-          <div className="relative z-10">
-            <Image
-              src={post.mainImage.asset.url}
-              alt={post.mainImage.alt || post.title}
-              width={1200}
-              height={400}
-              className="w-full h-64 sm:h-80 md:h-96 object-cover opacity-40"
-            />
-          </div>
-        )}
-        
+        {/* Background Image Layer */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
+          style={{ backgroundImage: `url(${globe_image.src})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-purple-600/90 dark:from-purple-700/90 dark:to-blue-700/90" />    
         <div className="relative z-10 py-12 px-4 sm:px-6 md:px-8">
           <div className="max-w-4xl mx-auto">
             <p className="text-white/90 text-sm sm:text-base mb-2">

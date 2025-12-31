@@ -1,12 +1,16 @@
+"use client";
 import Image from "next/image";
 import cch_wechat from "./assets/cch_wechat.png";
 import airplane_symbol from "./assets/home_airplane_symbol.png"
 import globe_image from "./assets/globe_image.jpg"
 import TravelPartners from "./components/TravelPartners";
 import Link from "next/link";
-import Footer from "./components/Footer"
+import React, { useState, useRef, useEffect } from 'react';
+import { ExternalLink, AlertCircle, Ship, Search } from 'lucide-react';
 
 export default function Home() {
+  const cruiseUrl = "https://cruise.cchtrip.com/";
+
   return (
 
     <div className="p-4 sm:p-8 md:p-10">
@@ -41,6 +45,71 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Cruise Search Engine Section */}
+      <div className="relative my-5 md:my-10 py-8 md:py-12 rounded-3xl overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600 dark:from-purple-700 dark:to-blue-800">
+        <div className="relative z-10 px-4 sm:px-6 md:px-8">
+          {/* Header */}
+          <div className="flex flex-col items-center mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-2 flex items-center gap-3">
+              <Ship className="w-8 h-8 md:w-12 md:h-12" />
+              邮轮搜索引擎
+            </h1>
+            <h2 className="text-sm sm:text-base md:text-lg text-zinc-100 text-center max-w-3xl">
+              探索全球豪华邮轮航线，查找最优惠的邮轮行程
+            </h2>
+          </div>
+          
+          {/* Demo Video Container */}
+          <div className="w-full max-w-7xl mx-auto">
+            <div
+              className="bg-black rounded-2xl shadow-2xl overflow-hidden relative"
+              style={{ height: '600px' }}
+            >
+              <video
+                src="/cruise_search_demo.mp4"
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls={false}
+                preload="metadata"
+              />
+            </div>
+
+            {/* Primary CTA Button */}
+            <div className="text-center mt-6">
+              <a
+                href={cruiseUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded-xl  hover:bg-blue-700 transition-colors duration-200 shadow-md hover:shadow-lg text-center"
+              >
+                <ExternalLink className="w-5 h-5" />
+                在新窗口中开始搜索
+              </a>
+            </div>
+
+            {/* Additional Info */}
+            <div className="text-center mt-4 space-y-2">
+              <p className="text-xs text-white/70">
+                🎥 上方演示展示了邮轮搜索流程
+              </p>
+              <p className="text-xs text-white/60">
+                点击按钮即可进入完整搜索引擎
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <style jsx>{`
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+        `}</style>
       </div>
       
       {/* Services Section */}
