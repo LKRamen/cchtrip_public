@@ -64,20 +64,16 @@ export default function Home() {
           {/* Demo Video Container */}
           <div className="w-full max-w-7xl mx-auto">
             <div
-              className="bg-black rounded-2xl shadow-2xl overflow-hidden relative"
+              className="bg-black rounded-2xl shadow-2xl overflow-hidden  relative"
               style={{ height: '600px' }}
             >
-              <video
-                src="https://soan2cgpndnh7ojv.public.blob.vercel-storage.com/cruise_search_demo.mp4"
+              <iframe
+                src="https://www.youtube.com/embed/tsvyC_aEA6I?autoplay=1&mute=1&loop=1&playlist=tsvyC_aEA6I&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
                 className="w-full h-full object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-                controls={false}
-                preload="metadata"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                style={{ border: 'none', pointerEvents: 'none' }}
               />
-
             </div>
 
             {/* Primary CTA Button */}
