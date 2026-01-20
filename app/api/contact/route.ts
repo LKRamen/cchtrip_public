@@ -23,8 +23,8 @@ export async function POST(request: Request) {
     
     // Use Resend's test email for the "from" address
     const result = await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'lkrahman08@gmail.com',
+      from: 'INV@cchtrip.com',
+      to: 'INV@cchtrip.com',
       subject: 'CCH - Contact Us Form Submission',
       text: emailContent,
     });
