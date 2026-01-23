@@ -53,20 +53,6 @@ export default async function CruiseGuidePage() {
           <p className="text-lg sm:text-xl text-zinc-100 text-center max-w-3xl mx-auto">
             实时更新，这里有一切你想知道的。
           </p>
-          
-          {/* Search Bar */}
-          {/* <div className="max-w-2xl mx-auto mt-8">
-            <div className="flex gap-2">
-              <input
-                type="text"
-                placeholder="输入关键词"
-                className="flex-1 px-4 py-3 rounded-lg border-2 border-white/50 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:border-white"
-              />
-              <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200">
-                搜索
-              </button>
-            </div>
-          </div> */}
         </div>
       </div>
 

@@ -12,6 +12,13 @@ import air_china from "../assets/air_china_logo.png";
 import american_airlines from "../assets/american_airlines_logo.png";
 import viking from "../assets/viking_river_cruises_logo.png";
 import windstar from "../assets/windstar_cruises_logo.png";
+import seabourn from "../assets/seabourn.png"
+import silversea from "../assets/silversea.png"
+import deltavacations from "../assets/deltavacations.png"
+import oceania from "../assets/oceania.png"
+import crystal from "../assets/crystal.png"
+import ponant from "../assets/ponant.png"
+import regent from "../assets/regent.png"
 import Image from "next/image";
 
 export default function TravelPartners() {
@@ -30,6 +37,14 @@ export default function TravelPartners() {
     { name: "American Airlines", logo: american_airlines },
     { name: "Viking River Cruises", logo: viking },
     { name: "Windstar Cruises", logo: windstar },
+    { name: "Seabourn", logo: seabourn },
+    { name: "Delta Vacations", logo: deltavacations },
+    { name: "Silversea", logo: silversea },
+    { name: "Oceania", logo: oceania },
+    { name: "Crystal", logo: crystal },
+    { name: "Ponant", logo: ponant },
+    { name: "Regent", logo: regent },
+
   ];
 
   return (
