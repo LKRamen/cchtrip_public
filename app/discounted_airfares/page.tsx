@@ -7,6 +7,7 @@ import globe_image from "../assets/globe_image.jpg";
 import { getImageUrl } from "@/sanity/lib/image";
 import { PortableText } from "next-sanity";
 import { urlFor } from "@/sanity/lib/image";
+import { useEffect, useState } from "react";
 
 const components = {
   types: {
@@ -120,23 +121,6 @@ interface CurrentAffairsPost {
   content?: any[];  // Change from string to any[]
 }
 
-async function getCurrentAffairsPosts(): Promise<CurrentAffairsPost[]> {
-  const query = `*[_type == "currentAffairs"] | order(publishedAt desc) {
-    _id,
-    title,
-    slug,
-    publishedAt,
-    mainImage {
-      asset,
-      alt
-    },
-    excerpt,
-    content
-  }`;
-  
-  return client.fetch(query);
-}
-
 const flightDeals = [
   {
     route: "达拉斯 - 北京",
@@ -176,8 +160,29 @@ const flightDeals = [
   }
 ];
 
-export default async function DiscountedAirfaresPage() {
-  const posts = await getCurrentAffairsPosts();
+export default function DiscountedAirfaresPage() {
+  const [posts, setPost] = useState<CurrentAffairsPost[]>([]);
+
+  useEffect(() => {
+    async function getCurrentAffairsPosts(){
+      const query = `*[_type == "currentAffairs"] | order(publishedAt desc) {
+        _id,
+        title,
+        slug,
+        publishedAt,
+        mainImage {
+          asset,
+          alt
+        },
+        excerpt,
+        content
+      }`;
+      
+      const posts = await client.fetch(query);
+      setPost(posts);
+    }
+    getCurrentAffairsPosts();
+  }, []);
 
   return (
     <div className="p-4 sm:p-8 md:p-10">
