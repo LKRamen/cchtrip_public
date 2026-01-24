@@ -1,4 +1,5 @@
-// app/discountedAirfares/page.tsx
+"use client";
+
 import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 import Link from "next/link";
