@@ -227,28 +227,6 @@ export default function Home() {
         
         {/* Content Layer */}
         <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12">
-          <div className="flex flex-col items-center">
-            <div className="flex-1">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-white text-center">中美直飞航线一览</h1>
-              <h2 className="text-sm sm:text-base md:text-lg text-zinc-100 leading-relaxed text-center">
-                彩虹之旅
-              </h2>
-            </div>
-            <div className="flex-1 py-5">
-              <Link
-                href="/china_us_flight_routes"
-                className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg 
-                          hover:bg-blue-700 transition-colors duration-200 shadow-md hover:shadow-lg text-center"
-              >
-                详细
-              </Link>
-            </div>
-          </div>
-
-          <div className="max-w-6xl mx-auto my-8">
-            <div className="mx-4 sm:mx-8 md:mx-12 h-[0.1rem] bg-white/50"/>
-          </div>
-
           <TravelPartners />
         </div>
       </div>

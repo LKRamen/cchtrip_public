@@ -33,7 +33,9 @@ export default function Header() {
         { name: "委托书样板", href: "/powerofattorney" },
         { name: "签证", href: "/visa" },
         { name: "无争议离婚", href: "/uncontested_divorce" },
-        { name: "声明书", href: "/statement"}
+        { name: "声明书", href: "/statement"},
+        { name: "中美直飞航线一览", href: "/china_us_flight_routes"},
+        { name: " 特价机票讯息", href: "/discounted_airfares"},
     ];
 
     return (

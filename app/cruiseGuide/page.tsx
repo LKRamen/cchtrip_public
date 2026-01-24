@@ -1,9 +1,11 @@
-// app/cruiseGuide/page.tsx
+"use client";
+
 import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 import Link from "next/link";
 import globe_image from "../assets/globe_image.jpg";
 import { getImageUrl } from "@/sanity/lib/image";
+import { useState, useEffect } from "react";
 
 interface CruiseGuidePost {
   _id: string;
@@ -17,24 +19,72 @@ interface CruiseGuidePost {
   excerpt?: string;
 }
 
-async function getCruiseGuidePosts(): Promise<CruiseGuidePost[]> {
-  const query = `*[_type == "cruiseGuide"] | order(publishedAt desc) {
-    _id,
-    title,
-    slug,
-    publishedAt,
-    mainImage {
-      asset,
-      alt
-    },
-    excerpt
-  }`;
-  
-  return client.fetch(query);
-}
+export default function CruiseGuidePage() { 
+  const [posts, setPosts] = useState<CruiseGuidePost[]>([]);
+  const [showAll, setShowAll] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const initialQuery = `*[_type == "cruiseGuide"] | order(publishedAt desc) [0...10] {
+        _id,
+        title,
+        slug,
+        publishedAt,
+        mainImage {
+          asset,
+          alt
+        },
+        excerpt
+      }`;
 
-export default async function CruiseGuidePage() {
-  const posts = await getCruiseGuidePosts();
+  // Initial fetch (top 10)
+  useEffect(() => {
+    async function fetchInitialPosts() {
+      const data = await client.fetch(initialQuery);
+      setPosts(data);
+    }
+    fetchInitialPosts();
+  }, []);
+
+  // Load all posts
+  const updateCruiseGuidePosts = async () => {
+    setLoading(true);
+    
+    // Check the CURRENT state before toggling
+    if (showAll) {
+      // Currently showing all, so go back to top 10
+      const top10Query = `*[_type == "cruiseGuide"] | order(publishedAt desc) [0...10] {
+        _id,
+        title,
+        slug,
+        publishedAt,
+        mainImage {
+          asset,
+          alt
+        },
+        excerpt
+      }`;
+      const top10Posts = await client.fetch(top10Query);
+      setPosts(top10Posts);
+      setShowAll(false);
+    } else {
+      // Currently showing 10, so load all
+      const allPostsQuery = `*[_type == "cruiseGuide"] | order(publishedAt desc) {
+        _id,
+        title,
+        slug,
+        publishedAt,
+        mainImage {
+          asset,
+          alt
+        },
+        excerpt
+      }`;
+      const allPosts = await client.fetch(allPostsQuery);
+      setPosts(allPosts);
+      setShowAll(true);
+    }
+    
+    setLoading(false);
+  };
 
   return (
     <div className="p-4 sm:p-8 md:p-10">
@@ -102,6 +152,15 @@ export default async function CruiseGuidePage() {
               </div>
             </div>
           ))}
+          <div className="flex justify-center">
+            <button 
+              className="mb-6 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 hover:cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={updateCruiseGuidePosts}
+              disabled={loading}
+            >
+              {loading ? '加载中...' : showAll ? '收起' : '查看全部'}
+            </button>
+          </div>
         </div>
       </div>
     </div>
