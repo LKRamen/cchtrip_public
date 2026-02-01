@@ -196,51 +196,11 @@ export default function DiscountedAirfaresPage() {
         
         <div className="relative z-10 py-16 px-4 sm:px-6 md:px-8">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mb-4">
-            特价机票讯息
+            旅游小帮手
           </h1>
           <p className="text-lg sm:text-xl text-zinc-100 text-center max-w-3xl mx-auto">
             实时更新，这里有一切你想知道的。
           </p>
-        </div>
-      </div>
-
-      {/* Flight Deals Section */}
-      <div className="max-w-4xl mx-auto mb-16">
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 sm:p-8 md:p-10">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">
-            特价机票咨讯
-          </h2>
-          
-          <div className="space-y-6">
-            {flightDeals.map((deal, index) => (
-              <div key={index}>
-                <div className="text-center space-y-3">
-                  <h3 className="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">
-                    {deal.route}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    {deal.dates}
-                  </p>
-                  <p className="text-blue-600 dark:text-blue-400 font-semibold">
-                    {deal.type}
-                  </p>
-                  <p className="text-gray-800 dark:text-white font-semibold">
-                    {deal.price}
-                  </p>
-                </div>
-                
-                {index < flightDeals.length - 1 && (
-                  <div className="mt-6 border-b-2 border-dashed border-blue-300 dark:border-blue-600" />
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-              所有机票价格以实时为准
-            </p>
-          </div>
         </div>
       </div>
 
