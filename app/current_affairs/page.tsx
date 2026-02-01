@@ -196,7 +196,7 @@ export default function DiscountedAirfaresPage() {
         
         <div className="relative z-10 py-16 px-4 sm:px-6 md:px-8">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mb-4">
-            旅游小帮手
+            旅游资讯
           </h1>
           <p className="text-lg sm:text-xl text-zinc-100 text-center max-w-3xl mx-auto">
             实时更新，这里有一切你想知道的。
