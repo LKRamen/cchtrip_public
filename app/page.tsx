@@ -23,7 +23,7 @@ export default function Home() {
           />
           
           {/* Color Overlay */}
-          <div className="absolute inset-0 bg-sky-500/90 dark:bg-blue-500/90 rounded-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-purple-600/90 dark:from-purple-700/90 dark:to-blue-700/90 rounded-3xl" />
 
         <div className="relative z-10 px-4 sm:px-6 md:px-8">
           {/* Header */}
