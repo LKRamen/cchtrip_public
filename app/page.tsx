@@ -14,41 +14,17 @@ export default function Home() {
   return (
 
     <div className="p-4 sm:p-8 md:p-10">
-      <div className="relative flex flex-col md:flex-row justify-center rounded-3xl p-4 md:p-8 gap-4 md:gap-6 overflow-hidden bg-white dark:bg-blue-700">
-        
+      {/* Cruise Search Engine Section */}
+      <div className="relative py-8 md:py-12 rounded-3xl">
         {/* Background Image Layer */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-          style={{ backgroundImage: `url(${globe_image.src})` }}
-        />
-        
-        {/* Content Layer */}
-        <div className="relative z-10 flex flex-col md:flex-row justify-center gap-4 md:gap-6 w-full">
-          {/* Text Section */}
-          <div className="flex flex-col md:w-2/3">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl p-1 text-blue-700 dark:text-white font-bold">
-              🌈 ｜彩虹之旅｜业务咨询服务
-            </h1>
-            <h2 className="text-sm sm:text-base md:text-lg text-black dark:text-zinc-200 px-1 py-3">
-              加入彩虹之旅咨询群，进一步给您更新鲜的资讯和更贴心的服务，包括但不限于咨询机票、邮轮、旅游、公证认证问题等，我们会竭诚为您服务，感谢您对彩虹之旅的信任！
-            </h2>
-          </div>
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-90 rounded-3xl"
+            style={{ backgroundImage: `url(${globe_image.src})` }}
+          />
           
-          {/* QR Code Section */}
-          <div className="flex justify-center md:justify-end items-start">
-            <div className="p-1 bg-gradient-to-r dark:from-purple-700 dark:to-red-400 from-blue-600 to-purple-600 rounded">
-              <Image 
-                  src={cch_wechat} 
-                  className="object-contain w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48" 
-                  alt='CCH WeChat QR Code'
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+          {/* Color Overlay */}
+          <div className="absolute inset-0 bg-sky-500/90 dark:bg-blue-500/90 rounded-3xl" />
 
-      {/* Cruise Search Engine Section */}
-      <div className="relative my-5 md:my-10 py-8 md:py-12 rounded-3xl overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600 dark:from-purple-700 dark:to-blue-800">
         <div className="relative z-10 px-4 sm:px-6 md:px-8">
           {/* Header */}
           <div className="flex flex-col items-center mb-6">
