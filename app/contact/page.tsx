@@ -11,7 +11,7 @@ export default function ContactUsPage() {
     name: "",
     email: "",
     phone: "",
-    service: "咨询业务（必填）",
+    service: "Service Inquiry (Required)",
     wechat: "",
     message: "",
     smsConsent: false
@@ -46,7 +46,7 @@ export default function ContactUsPage() {
           name: "",
           email: "",
           phone: "",
-          service: "咨询业务（必填）",
+          service: "Service Inquiry (Required)",
           wechat: "",
           message: "",
           smsConsent: false
@@ -65,51 +65,45 @@ export default function ContactUsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative py-10 md:py-16 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{ backgroundImage: `url(${globe_image.src})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-700 via-purple-700 to-pink-600" />
-
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="relative w-28 h-28 mx-auto mb-6 bg-white rounded-full p-4 shadow-lg flex items-center justify-center">
-            <div className="relative w-full h-full">
-              <Image
-                src={favicon_letters}
-                fill
-                className="object-contain"
-                alt="CCH Logo"
-              />
-            </div>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
-            联系我们
-          </h1>
-
-          <p className="text-zinc-100 text-base sm:text-lg">
-            7X24小时服务！
-          </p>
-        </div>
-      </div>
-
-      {/* Contact Content */}
       <div className="p-4 sm:p-8 md:p-10">
-        <div className="relative max-w-6xl mx-auto rounded-3xl overflow-hidden bg-white dark:bg-blue-700">
+        <div className="relative rounded-3xl overflow-hidden mb-8">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-95"
             style={{ backgroundImage: `url(${globe_image.src})` }}
           />
+          <div className="absolute inset-0 bg-[#1e4396]/90" />
 
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 md:p-12">
+          <div className="relative z-10 py-16 px-4 sm:px-6 md:px-8 text-center">
+            <div className="relative w-28 h-28 mx-auto mb-8 bg-white rounded-full p-4 shadow-lg flex items-center justify-center">
+              <div className="relative w-full h-full">
+                <Image
+                  src={favicon_letters}
+                  fill
+                  className="object-contain"
+                  alt="CCH Logo"
+                />
+              </div>
+            </div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
+              Contact Us
+            </h1>
+            <p className="text-lg sm:text-xl text-zinc-100">
+              Available 24/7!
+            </p>
+          </div>
+        </div>
+
+        {/* Contact Content */}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
             {/* Left Column - Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold text-blue-700 dark:text-white mb-4">
-                CONTACT US
+            <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg p-6 md:p-10">
+              <h2 className="text-2xl font-bold text-[#045eb8] dark:text-blue-400 mb-2">
+                Send Us a Message
               </h2>
-              <p className="text-gray-700 dark:text-gray-200 mb-8">
-                通过填写表格我们提供联系信息，我们会及时和您联系！
+              <p className="text-gray-600 dark:text-gray-400 mb-8">
+                Fill out the form below and we'll get back to you promptly!
               </p>
 
               <div className="space-y-4">
@@ -118,8 +112,8 @@ export default function ContactUsPage() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="名字"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-500 bg-white dark:bg-blue-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Name"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#045eb8]"
                 />
 
                 <input
@@ -127,8 +121,8 @@ export default function ContactUsPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="邮箱"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-500 bg-white dark:bg-blue-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Email"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#045eb8]"
                 />
 
                 <input
@@ -136,23 +130,23 @@ export default function ContactUsPage() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="手机号码"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-500 bg-white dark:bg-blue-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Phone Number"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#045eb8]"
                 />
 
                 <select
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-500 bg-white dark:bg-blue-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#045eb8]"
                 >
-                  <option>咨询业务（必填）</option>
-                  <option>无争议离婚</option>
-                  <option>签证咨询</option>
-                  <option>旅行团咨询</option>
-                  <option>保险咨询</option>
-                  <option>海牙认证</option>
-                  <option>其他</option>
+                  <option>Service Inquiry (Required)</option>
+                  <option>Uncontested Divorce</option>
+                  <option>Visa Consultation</option>
+                  <option>Tour Group Inquiry</option>
+                  <option>Insurance Consultation</option>
+                  <option>Hague Apostille</option>
+                  <option>Other</option>
                 </select>
 
                 <input
@@ -160,16 +154,16 @@ export default function ContactUsPage() {
                   name="wechat"
                   value={formData.wechat}
                   onChange={handleChange}
-                  placeholder="微信（选填）"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-500 bg-white dark:bg-blue-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="WeChat (Optional)"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#045eb8]"
                 />
 
-                <div className="bg-gray-50 dark:bg-blue-900 p-4 rounded-lg text-sm text-gray-700 dark:text-gray-200">
-                  <p className="font-semibold mb-2">SMS Terms & Conditions</p>
+                <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg text-sm text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-600">
+                  <p className="font-semibold mb-2 text-gray-800 dark:text-gray-100">SMS Terms & Conditions</p>
                   <p className="mb-2">
                     By subscribing, you consent to receive product updates as SMS or MMS messages from Acme Corp. To opt-out of our text messaging program, send the word STOP to 718-353-2188 at any time. Text HELP for help. View our{" "}
-                    <a href="/terms_and_conditions" className="text-blue-600 dark:text-blue-300 underline cursor-pointer">Terms of Service</a> and{" "}
-                    <a href="/privacy_policy" className="text-blue-600 dark:text-blue-300 underline cursor-pointer">Privacy Policy</a>.
+                    <a href="/terms_and_conditions" className="text-[#045eb8] dark:text-blue-400 underline cursor-pointer">Terms of Service</a> and{" "}
+                    <a href="/privacy_policy" className="text-[#045eb8] dark:text-blue-400 underline cursor-pointer">Privacy Policy</a>.
                   </p>
                   <p>Msg & Data rates may apply. Message frequency varies.</p>
                 </div>
@@ -180,9 +174,9 @@ export default function ContactUsPage() {
                     name="smsConsent"
                     checked={formData.smsConsent}
                     onChange={handleChange}
-                    className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    className="mt-1 w-4 h-4 text-[#045eb8] border-gray-300 rounded focus:ring-[#045eb8]"
                   />
-                  <span className="text-sm text-gray-700 dark:text-gray-200">
+                  <span className="text-sm text-gray-700 dark:text-gray-300">
                     Yes, I'd like to receive updates via text
                   </span>
                 </label>
@@ -191,99 +185,84 @@ export default function ContactUsPage() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="信息"
+                  placeholder="Message"
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-500 bg-white dark:bg-blue-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#045eb8]"
                 />
 
                 <button
                   onClick={handleSubmit}
                   disabled={isSubmitting}
-                  className="w-full px-6 py-4 bg-cyan-500 hover:bg-cyan-600 text-white font-bold rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-6 py-3 bg-[#045eb8] hover:bg-[#004e9c] text-white font-semibold rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "提交中..." : "提交"}
+                  {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
 
                 {submitStatus === "success" && (
                   <div className="p-4 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-lg">
-                    感谢您的留言！我们会尽快与您联系。
+                    Thank you for your message! We will get back to you as soon as possible.
                   </div>
                 )}
 
                 {submitStatus === "error" && (
                   <div className="p-4 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-lg">
-                    提交失败，请稍后重试或直接联系我们。
+                    Submission failed. Please try again later or contact us directly.
                   </div>
                 )}
               </div>
             </div>
 
             {/* Right Column - Contact Details */}
-            <div>
-              <h2 className="text-3xl font-bold text-blue-700 dark:text-white mb-4">
-                联系细节
-              </h2>
+            <div className="flex flex-col gap-6">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg p-6 md:p-10">
+                <h2 className="text-2xl font-bold text-[#045eb8] dark:text-blue-400 mb-2">
+                  Contact Details
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                  Reach us through any of the methods below — we reply as quickly as possible! Follow us on Xiaohongshu for the latest deals and updates.
+                </p>
 
-              <p className="text-gray-700 dark:text-gray-200 mb-8 leading-relaxed">
-                您可以通过下面方式联系我们，也可通过下面的表格填写正确的信息和我们取得联系我们会在尽可能快的时间及时回复！请关注我们的小红书和抖音获得最新的价格优惠和资讯，彩虹之旅期待和您相遇！
-              </p>
-
-              <div className="space-y-4 text-gray-700 dark:text-gray-200">
-                <div>
-                  <p className="font-semibold">地址：</p>
-                  <p>41-25 Kissena Blvd #110，Flushing NY 11355 百利大厦2楼119室</p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">美国电话：</p>
-                  <p>718-353-2188</p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">中国电话：</p>
-                  <p>400-000-8218</p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">Email:</p>
-                  <p>inv@cchtrip.com</p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">微信：</p>
-                  <p>CCH_402</p>
+                <div className="space-y-4">
+                  {[
+                    { label: "Address", value: "41-25 Kissena Blvd #110, Flushing NY 11355, Baili Plaza, 2nd Floor, Suite 119" },
+                    { label: "US Phone", value: "718-353-2188" },
+                    { label: "China Phone", value: "400-000-8218" },
+                    { label: "Email", value: "inv@cchtrip.com" },
+                    { label: "WeChat", value: "CCH_402" },
+                  ].map(({ label, value }) => (
+                    <div key={label} className="flex gap-3 items-start">
+                      <span className="text-sm font-semibold text-[#045eb8] dark:text-blue-400 w-28 shrink-0 pt-0.5">{label}</span>
+                      <span className="text-gray-700 dark:text-gray-300 text-sm">{value}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="mt-8">
-                <div className="bg-blue-700 dark:bg-blue-900 p-4 rounded-xl shadow-lg">
-                  <div className="aspect-video bg-blue-500 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                    <Image 
-                    src={cch_location}
-                    className="object-contain rounded-lg" 
-                    alt='Image of CCH Office'
-                    />
-                  </div>
-                </div>
+              {/* Office Photo */}
+              <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src={cch_location}
+                  className="w-full object-cover"
+                  alt="CCH Office"
+                />
               </div>
 
               {/* Google Maps Embed */}
-              <div className="mt-8">
-                <div className="bg-white dark:bg-blue-900 p-4 rounded-xl shadow-lg">
-                  <div className="aspect-video bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1896649886556!2d-73.82888268459467!3d40.76020797932661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2601e3c8a7c8b%3A0x7f3b0d0e8e8e8e8e!2s41-25%20Kissena%20Blvd%2C%20Flushing%2C%20NY%2011355!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  </div>
+              <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1896649886556!2d-73.82888268459467!3d40.76020797932661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2601e3c8a7c8b%3A0x7f3b0d0e8e8e8e8e!2s41-25%20Kissena%20Blvd%2C%20Flushing%2C%20NY%2011355!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

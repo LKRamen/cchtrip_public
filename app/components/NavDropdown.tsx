@@ -23,9 +23,9 @@ export default function NavDropdown({ title, items, onMenuClose }: NavDropdownPr
             {/* Desktop Dropdown (hover) */}
             <div className="hidden md:block group">
                 <button className="flex items-center justify-between w-full py-3 px-4 text-white rounded-lg
-                                   hover:bg-gradient-to-br hover:from-blue-700 hover:to-purple-700
-                                   transition-all duration-300
-                                   group-hover:shadow-lg group-hover:scale-105 group-hover:font-bold">
+                   hover:bg-[#004e9c]
+                   transition-all duration-300
+                   group-hover:shadow-lg group-hover:scale-105">
                     {title}
                     <ChevronDown className="w-4 h-4 ml-1.5 group-hover:rotate-180 transition-transform duration-300" />
                 </button>
@@ -42,7 +42,7 @@ export default function NavDropdown({ title, items, onMenuClose }: NavDropdownPr
                             key={item.name}
                             href={item.href}
                             className="block px-4 py-3 text-gray-800 dark:text-white
-                                       hover:bg-gradient-to-br hover:from-blue-700 hover:to-purple-700 hover:text-white
+                                       hover:bg-[#004e9c] hover:text-white
                                        transition-colors duration-200
                                        text-sm md:text-base
                                        border-b border-gray-200 dark:border-gray-700
