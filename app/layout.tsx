@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "彩虹之旅国际旅行社",
+  title: "Rainbow Journey Travel Agency",
 };
 
 export default function RootLayout({

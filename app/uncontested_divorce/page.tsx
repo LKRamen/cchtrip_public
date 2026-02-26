@@ -6,113 +6,122 @@ import divorce_qr from "../assets/divorce_qr.jpg";
 export default function UncontestedDivorceCNPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <div className="relative py-10 md:py-16 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{ backgroundImage: `url(${globe_image.src})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-700 via-purple-700 to-pink-600" />
-
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="relative w-28 h-28 mx-auto mb-6 bg-white rounded-full p-4 shadow-lg flex items-center justify-center">
-            <div className="relative w-full h-full">
-              <Image
-                src={favicon_letters}
-                fill
-                className="object-contain"
-                alt="CCH Logo"
-              />
-            </div>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
-            无争议离婚
-          </h1>
-
-          <p className="text-zinc-100 text-base sm:text-lg">
-            彩虹之旅 · 01/10/2025
-          </p>
-        </div>
-      </div>
-
-      {/* Article Content */}
       <div className="p-4 sm:p-8 md:p-10">
-        <div className="relative max-w-5xl mx-auto rounded-3xl p-6 md:p-12 overflow-hidden bg-white dark:bg-blue-700">
+
+        {/* Hero Section */}
+        <div className="relative rounded-3xl overflow-hidden mb-8">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-95"
             style={{ backgroundImage: `url(${globe_image.src})` }}
           />
+          <div className="absolute inset-0 bg-[#1e4396]/90" />
 
-          <div className="relative z-10 space-y-8 text-gray-700 dark:text-gray-200 text-base sm:text-lg leading-relaxed">
-            <h2 className="text-3xl sm:text-4xl font-bold text-blue-700 dark:text-white">
-              无争议离婚
-            </h2>
-
-            <p>
-              无争议离婚也称非争议离婚或协议离婚。无争议离婚除了需要满足纽约州的两大基本要求（居住要求、离婚理由要求）外，
-              还必须具备以下两个条件：
-            </p>
-
-            <ol className="list-decimal pl-6 space-y-2">
-              <li>
-                夫妻双方对子女的监护权、抚养权、夫妻赡养费、房产、资产及婚姻财产方面没有分歧；
-              </li>
-              <li>被告方同意并需要在离婚协议上签字。</li>
-            </ol>
-
-            <p>
-              夫妻双方如果因为感情破裂超过六个月以上，并且没有修复的可能性，那么可以协议离婚，并向法院递交申请。
-              首先，当事人双方需要满足纽约州法律规定的居住要求；
-              其次，确实符合“感情破裂”的离婚理由。
-            </p>
-
-            <p>
-              接着，离婚双方需要确认在子女、财产、赡养等问题上不存在任何争议。
-              无争议离婚虽然流程相对简单，但仍然建议寻求专业律师的帮助，
-              协助分析是否真正不存在争议，以避免后续法律风险。
-            </p>
-
-            <h3 className="text-2xl sm:text-3xl font-bold text-blue-700 dark:text-white pt-6">
-              无争议离婚需要准备什么材料？
-            </h3>
-
-            <ol className="list-decimal pl-6 space-y-2">
-              <li>离婚双方的护照首页复印件或双方的身份证明；</li>
-              <li>离婚双方的社会安全卡（社安卡）复印件；</li>
-              <li>离婚双方其中一方的结婚证；</li>
-              <li>
-                如有子女，需要提供子女的出生证明以及双方去年的报税单；
-              </li>
-              <li>
-                如有房产，需要提供房产的具体信息。
-              </li>
-            </ol>
-
-            <p className="pt-4 font-semibold">
-              如果您有任何关于无争议离婚的问题，可以随时拨打我们的 7×24 小时服务热线，
-              或添加下方微信进行咨询，我们随时都会帮您解答您目前存在的问题。
-            </p>
-
-            {/* QR Code Section */}
-            <div className="pt-10 border-t border-gray-300 dark:border-gray-500 text-center">
-              <div className="flex justify-center mb-4">
-                <div className="bg-white p-4 rounded-xl shadow-lg">
-                  <Image
-                    src={divorce_qr}
-                    width={220}
-                    height={220}
-                    alt="无争议离婚 微信二维码"
-                    className="object-contain"
-                  />
-                </div>
+          <div className="relative z-10 py-16 px-4 sm:px-6 md:px-8 text-center">
+            <div className="relative w-28 h-28 mx-auto mb-8 bg-white rounded-full p-4 shadow-lg flex items-center justify-center">
+              <div className="relative w-full h-full">
+                <Image
+                  src={favicon_letters}
+                  fill
+                  className="object-contain"
+                  alt="CCH Logo"
+                />
               </div>
+            </div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
+              Uncontested Divorce
+            </h1>
+            <p className="text-lg sm:text-xl text-zinc-100">
+              Rainbow Travel · 01/10/2025
+            </p>
+          </div>
+        </div>
 
-              <p className="mt-4 text-lg font-bold text-blue-700 dark:text-white">
-                Nick 胡先生
+        {/* Article Content */}
+        <div className="max-w-4xl mx-auto space-y-6">
+
+          {/* Intro Card */}
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-10">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#045eb8] dark:text-blue-400 mb-5">
+              What is an Uncontested Divorce?
+            </h2>
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
+              <p>
+                An uncontested divorce — also known as a non-contested or agreed divorce — requires meeting New York State's two basic requirements (residency requirements and grounds for divorce), as well as the following two additional conditions:
+              </p>
+              <ol className="list-decimal pl-6 space-y-2">
+                <li>Both spouses have no disputes regarding child custody, child support, spousal maintenance, real estate, assets, or marital property.</li>
+                <li>The respondent agrees and must sign the divorce agreement.</li>
+              </ol>
+              <p>
+                If a couple has experienced an irretrievable breakdown of their marriage for more than six months with no possibility of reconciliation, they may file for an agreed divorce and submit an application to the court. The parties must first satisfy New York State's residency requirements and genuinely qualify under the "irretrievable breakdown" grounds for divorce.
+              </p>
+              <p>
+                The divorcing parties must also confirm there are no disputes regarding children, property, or maintenance. While the uncontested divorce process is relatively straightforward, it is still advisable to seek help from a qualified attorney to confirm that no genuine disputes exist and to avoid future legal complications.
               </p>
             </div>
           </div>
+
+          {/* Requirements Card */}
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-10">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#045eb8] dark:text-blue-400 mb-5">
+              What Documents Are Required?
+            </h2>
+            <ol className="list-decimal pl-6 space-y-3 text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
+              <li>A copy of the first page of each party's passport, or other valid government-issued photo ID.</li>
+              <li>A copy of each party's Social Security card.</li>
+              <li>The marriage certificate from either party.</li>
+              <li>If there are children, provide each child's birth certificate as well as both parties' tax returns from the prior year.</li>
+              <li>If there is real estate involved, provide detailed information about the property.</li>
+            </ol>
+          </div>
+
+          {/* Contact / QR Card */}
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+            <div className="flex flex-col md:flex-row">
+
+              {/* Blue panel */}
+              <div className="relative md:w-2/5 min-h-[180px] overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: `url(${globe_image.src})` }}
+                />
+                <div className="absolute inset-0 bg-[#045eb8]/90" />
+                <div className="relative z-10 h-full flex flex-col items-center justify-center p-8 text-center">
+                  <p className="text-white font-bold text-xl mb-2">Have Questions?</p>
+                  <p className="text-zinc-100 text-sm leading-relaxed">
+                    Reach us anytime via our 24/7 hotline or scan the WeChat QR code to connect directly.
+                  </p>
+                  <a
+                    href="tel:718-353-2188"
+                    className="mt-5 px-5 py-2.5 bg-white text-[#045eb8] font-semibold rounded-lg text-sm hover:bg-gray-100 transition-colors duration-200 shadow"
+                  >
+                    📞 718-353-2188
+                  </a>
+                </div>
+              </div>
+
+              {/* QR code panel */}
+              <div className="md:w-3/5 p-8 flex flex-col items-center justify-center text-center">
+                <div className="bg-white p-4 rounded-xl shadow-lg inline-block mb-4">
+                  <Image
+                    src={divorce_qr}
+                    width={180}
+                    height={180}
+                    alt="WeChat QR Code – Uncontested Divorce"
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-lg font-bold text-[#045eb8] dark:text-blue-400">
+                  Mr. Nick Hu
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  Scan to connect on WeChat
+                </p>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
